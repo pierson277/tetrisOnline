@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Online</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="game-container">
+        <header>
+            <h1>TETRIS <span>ONLINE</span></h1>
+            <div id="connection">Connecting...</div>
+        </header>
+
+        <section class="game">
+            <aside class="side-panel">
+                <div class="panel">
+                    <h2>HOLD</h2>
+                    <canvas id="holdCanvas" width="120" height="100"></canvas>
+                </div>
+
+                <div class="panel">
+                    <h2>SCORE</h2>
+                    <p id="score">0</p>
+                </div>
+
+                <div class="panel">
+                    <h2>LEVEL</h2>
+                    <p id="level">1</p>
+                </div>
+
+                <div class="panel">
+                    <h2>LINES</h2>
+                    <p id="lines">0</p>
+                </div>
+            </aside>
+
+            <div class="board-container">
+                <canvas id="board" width="300" height="600"></canvas>
+                <div id="gameOver" class="overlay hidden">
+                    <h2>GAME OVER</h2>
+                    <button id="restart">PLAY AGAIN</button>
+                </div>
+            </div>
+
+            <aside class="side-panel">
+                <div class="panel">
+                    <h2>NEXT</h2>
+                    <canvas id="nextCanvas" width="120" height="100"></canvas>
+                </div>
+
+                <div class="panel controls">
+                    <h2>CONTROLS</h2>
+                    <p>← → Move</p>
+                    <p>↑ Rotate</p>
+                    <p>↓ Soft Drop</p>
+                    <p>Space Hard Drop</p>
+                    <p>C Hold</p>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <script src="/static/game.js"></script>
+</body>
+</html>
